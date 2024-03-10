@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto' , sans-serif ; 
+    
+}
+
+html,body{
+    display: grid;
+    height: 150%;
+    width: 100%;
+    place-items: center;
+    background: none;
+    background: linear-gradient(#c70a53, #13156b);
+    
+}
+
+
+.wrapper{
+    height: 400px;
+    width: 360px;
+    position: relative;
+    padding: 5px ;
+    perspective: 1000px;
+
+}
+
+.wrapper .card{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;  
+    padding: 5px;
+    border: 3px solid #FF004D;
+    transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+}
+
+.wrapper:hover > .back_face{
+    transform :rotateY(0deg);  
+}
+.wrapper .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.wrapper .back_face{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly ;
+    transform: rotateY(180deg);
+}
+
+.wrapper .back_face .info{
+    text-align: center;
+    color: #14234d;
+}
+.wrapper .back_face .info .title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #f1bb07;
+}
+.wrapper .back_face img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: #FF004D;
+}
+
+.back_face ul{
+    display: flex;
+    
+}
+.back_face ul a{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(#ffd013 , #ffc400);
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 41px;
+    margin: 0 5px;
+    border-radius: 50%;
+    color: white;
+}
+.back_face ul a:hover{
+    background: none;
+    color: #FF004D;
+    border-color: #c70a53;
+
+}
